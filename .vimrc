@@ -3,6 +3,7 @@ set backupdir=$HOME/.vim//
 set undodir=$HOME/.vim//
 set number
 set rnu
+set cursorline
 
 " Set hidden allows moving to other buffers without saving
 set hidden
@@ -98,6 +99,15 @@ Plug 'rbtnn/game_engine.vim'
 Plug 'rbtnn/mario.vim'
 call plug#end()
 colorscheme monokai
+
+" TSX/JSX support for jumping between html tags
+packloadall
+packadd matchit
+let b:match_words='(:),\[:\],{:},<:>,<\@<=\([^/][^ \t>]*\)[^>]*\%(\%(=\|/\)\@<!>\|$\):<\@<=/\1>'
+
+set foldmethod=indent
+set nofoldenable
+set foldlevel=2
 
 " Airline customization
 let g:airline#extensions#tabline#enabled = 1
@@ -257,3 +267,14 @@ function! DeleteInactiveBufs()
     echomsg nWipeouts . ' buffer(s) wiped out'
 endfunction
 command! Bdi :call DeleteInactiveBufs()
+
+" I found za to be somewhat unintuitive so this toggles how I expect
+function! ToggleFold()
+   "If current line is not a fold it returns -1
+   if foldclosed(line('.')) == -1 
+      :normal! zc<CR>
+   else
+      :normal! zO<CR>
+   endif
+endfunction
+nnoremap <tab> :call ToggleFold()<CR>
