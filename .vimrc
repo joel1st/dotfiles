@@ -30,6 +30,7 @@ call plug#begin()
 " Python 2 or 3 - for autocomplete engine
 " Ag - for project searches
 " Node, NPM, Typescript (2.5.3) for typescript auto completion
+" npm install -g typescript-formatter 
 
 " Sensible vim defaults
 Plug 'tpope/vim-sensible'
@@ -93,6 +94,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " Color Schemes
 Plug 'flazz/vim-colorschemes'
 Plug 'crusoexia/vim-monokai'
+
+" Autoformat
+Plug 'Chiel92/vim-autoformat'
 
 " For high productivity
 Plug 'rbtnn/game_engine.vim'
