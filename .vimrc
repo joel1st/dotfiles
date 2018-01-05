@@ -281,4 +281,4 @@ function! ToggleFold()
       :normal! zO<CR>
    endif
 endfunction
-nnoremap <tab> :call ToggleFold()<CR>
+" nnoremap <tab> :call ToggleFold()<CR>

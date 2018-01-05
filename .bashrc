@@ -36,3 +36,4 @@ alias r='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "
 tmux attach &> /dev/null
 [[ $TERM != "screen" && $TERM != "screen-256color" ]] && tmux
 source ~/.mycli-profile
+alias gitclone='echo "git@github.com:DenisKolodin/yew.git"'
