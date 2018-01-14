@@ -37,3 +37,7 @@ tmux attach &> /dev/null
 [[ $TERM != "screen" && $TERM != "screen-256color" ]] && tmux
 source ~/.mycli-profile
 alias gitclone='echo "git@github.com:DenisKolodin/yew.git"'
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /home/joel/code/ganache/node_modules/tabtab/.completions/electron-forge.bash ] && . /home/joel/code/ganache/node_modules/tabtab/.completions/electron-forge.bash

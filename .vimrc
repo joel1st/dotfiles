@@ -11,6 +11,9 @@ set hidden
 " Allows mouse interaction
 set mouse=a
 
+" Automatically update buffer if file changes externally
+set autoread
+
 " Yanks and pastes off system clipboard as default clipboard
 set clipboard=unnamedplus
 
@@ -87,7 +90,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Typescript utilities
 Plug 'quramy/tsuquyomi'
 
-
 " Auto completion / drop down / utilities for multi languages (and ts)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
@@ -150,7 +152,6 @@ let g:UltiSnipsJumpForwardTrigger      = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
 let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
 
 " Config for build in omnisearch 
 set completeopt=noinsert,menuone
