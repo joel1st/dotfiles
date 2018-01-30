@@ -34,6 +34,7 @@ call plug#begin()
 " Ag - for project searches
 " Node, NPM, Typescript (2.5.3) for typescript auto completion
 " npm install -g typescript-formatter 
+" Go for go dev. run GoInstallBin in vim ex mode afterwards
 
 " Sensible vim defaults
 Plug 'tpope/vim-sensible'
@@ -90,6 +91,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Typescript utilities
 Plug 'quramy/tsuquyomi'
 
+" Vim Solidity
+Plug 'tomlion/vim-solidity'
+
 " Auto completion / drop down / utilities for multi languages (and ts)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
@@ -103,6 +107,8 @@ Plug 'Chiel92/vim-autoformat'
 " For high productivity
 Plug 'rbtnn/game_engine.vim'
 Plug 'rbtnn/mario.vim'
+
+Plug 'fatih/vim-go'
 call plug#end()
 colorscheme monokai
 
@@ -176,8 +182,14 @@ vnoremap <leader>r y:%s/<C-R>"
 " Switch windows
 nnoremap <leader>w :w<CR>
 vnoremap <leader>w :w<CR>
-nnoremap <leader>] :TsuDefinition<CR>
-vnoremap <leader>] :TsuDefinition<CR>
+
+autocmd FileType c nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType c vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType typescript nnoremap <buffer> <leader>] :TsuDefinition<CR> 
+autocmd FileType typescript vnoremap <buffer> <leader>] :TsuDefinition<CR> 
+autocmd FileType go nnoremap <buffer> <leader>] :GoDef<CR> 
+autocmd FileType go vnoremap <buffer> <leader>] :GoDef<CR> 
+
 nnoremap <leader>} :YcmCompleter GoToReferences<CR>
 vnoremap <leader>} :YcmCompleter GoToReferences<CR>
 nnoremap <leader><CR> :TsuImport<CR>
