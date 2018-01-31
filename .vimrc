@@ -57,7 +57,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Handy visualisation of jump commands (f & t)
-Plug 'unblevable/quick-scope'
+Plug 'bradford-smith94/quick-scope'
 
 " Nice file explorer / interactions
 Plug 'scrooloose/nerdtree'
@@ -98,9 +98,9 @@ Plug 'tomlion/vim-solidity'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Color Schemes
-Plug 'flazz/vim-colorschemes'
-Plug 'crusoexia/vim-monokai'
-
+" Plug 'flazz/vim-colorschemes'
+" Plug 'crusoexia/vim-monokai'
+Plug 'morhetz/gruvbox'
 " Autoformat
 Plug 'Chiel92/vim-autoformat'
 
@@ -110,8 +110,9 @@ Plug 'rbtnn/mario.vim'
 
 Plug 'fatih/vim-go'
 call plug#end()
-colorscheme monokai
-
+set background=dark    " Setting dark mode
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'soft'
 " TSX/JSX support for jumping between html tags
 packloadall
 packadd matchit
@@ -126,7 +127,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='gruvbox'
 
 " Quick scope settings
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
@@ -185,6 +186,10 @@ vnoremap <leader>w :w<CR>
 
 autocmd FileType c nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
 autocmd FileType c vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType javascript nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType javascript vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType rust nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+autocmd FileType rust vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
 autocmd FileType typescript nnoremap <buffer> <leader>] :TsuDefinition<CR> 
 autocmd FileType typescript vnoremap <buffer> <leader>] :TsuDefinition<CR> 
 autocmd FileType go nnoremap <buffer> <leader>] :GoDef<CR> 
