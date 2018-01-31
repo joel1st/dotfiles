@@ -84,6 +84,9 @@ Plug 'cristianoliveira/vim-react-html-snippets'
 
 " Syntax highlighting support (for errors etc.)
 Plug 'vim-syntastic/syntastic'
+"
+" show line indentation lines 
+Plug 'Yggdroot/indentLine'
 
 " Typescript
 " Typescript styling
@@ -110,9 +113,10 @@ Plug 'rbtnn/mario.vim'
 
 Plug 'fatih/vim-go'
 call plug#end()
+let g:gruvbox_contrast_dark = 'soft'
 set background=dark    " Setting dark mode
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'soft'
+let g:indentLine_char = '┆'
 " TSX/JSX support for jumping between html tags
 packloadall
 packadd matchit
