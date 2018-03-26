@@ -90,7 +90,8 @@ Plug 'Yggdroot/indentLine'
 
 " Typescript
 " Typescript styling
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
 " Typescript utilities
 Plug 'quramy/tsuquyomi'
 
@@ -118,9 +119,9 @@ set background=dark    " Setting dark mode
 colorscheme gruvbox
 let g:indentLine_char = '┆'
 " TSX/JSX support for jumping between html tags
-packloadall
-packadd matchit
-let b:match_words='(:),\[:\],{:},<:>,<\@<=\([^/][^ \t>]*\)[^>]*\%(\%(=\|/\)\@<!>\|$\):<\@<=/\1>'
+" packloadall
+" packadd matchit
+" let b:match_words='(:),\[:\],{:},<:>,<\@<=\([^/][^ \t>]*\)[^>]*\%(\%(=\|/\)\@<!>\|$\):<\@<=/\1>'
 
 set foldmethod=indent
 set nofoldenable
