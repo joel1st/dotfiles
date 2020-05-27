@@ -67,23 +67,23 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Multi cursor support in vim
 Plug 'terryma/vim-multiple-cursors'
- 
+
 " Fuzzy finder support - search buffers, project files etc.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Vim airline - visual  
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " Snippet support
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'ervandew/supertab'
-Plug 'cristianoliveira/vim-react-html-snippets'
+" Plug 'sirver/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'ervandew/supertab'
+" Plug 'cristianoliveira/vim-react-html-snippets'
 
 " Syntax highlighting support (for errors etc.)
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 "
 " show line indentation lines 
 Plug 'Yggdroot/indentLine'
@@ -91,33 +91,33 @@ Plug 'Yggdroot/indentLine'
 " Typescript
 " Typescript styling
 " Plug 'HerringtonDarkholme/yats.vim'
-Plug 'leafgarland/typescript-vim'
-" Typescript utilities
-Plug 'quramy/tsuquyomi'
+" Plug 'leafgarland/typescript-vim'
+" " Typescript utilities
+" Plug 'quramy/tsuquyomi'
 
 " Vim Solidity
 Plug 'tomlion/vim-solidity'
 
 " Auto completion / drop down / utilities for multi languages (and ts)
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Color Schemes
 " Plug 'flazz/vim-colorschemes'
 " Plug 'crusoexia/vim-monokai'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 " Autoformat
 Plug 'Chiel92/vim-autoformat'
 
 " For high productivity
-Plug 'rbtnn/game_engine.vim'
-Plug 'rbtnn/mario.vim'
+" Plug 'rbtnn/game_engine.vim'
+" Plug 'rbtnn/mario.vim'
 
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 call plug#end()
-let g:gruvbox_contrast_dark = 'soft'
-set background=dark    " Setting dark mode
-colorscheme gruvbox
-let g:indentLine_char = '┆'
+" let g:gruvbox_contrast_dark = 'soft'
+" set background=dark    " Setting dark mode
+" colorscheme gruvbox
+" let g:indentLine_char = '┆'
 " TSX/JSX support for jumping between html tags
 " packloadall
 " packadd matchit
@@ -127,27 +127,27 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=2
 
-" Airline customization
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline_theme='gruvbox'
+" " Airline customization
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#syntastic#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline_theme='gruvbox'
 
 " Quick scope settings
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-" Sensible syntastic settings
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" " Sensible syntastic settings
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-" Sensible typescript settings
-let g:tsuquyomi_disable_quickfix = 1
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_single_quote_import = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
+" " Sensible typescript settings
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:tsuquyomi_completion_detail = 1
+" let g:tsuquyomi_single_quote_import = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
 
 " File fuzzy find all files in a project that aren't git ignored
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -157,13 +157,13 @@ let mapleader = "\<Space>"
 
 " YouCompleteMe and UltiSnips compatibility, with the helper of supertab
 " (via http://stackoverflow.com/a/22253548/1626737)
-let g:SuperTabDefaultCompletionType    = '<C-n>'
-let g:SuperTabCrMapping                = 0
-let g:UltiSnipsExpandTrigger           = '<tab>'
-let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
-let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType    = '<C-n>'
+" let g:SuperTabCrMapping                = 0
+" let g:UltiSnipsExpandTrigger           = '<tab>'
+" let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+" let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+" let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 " Config for build in omnisearch 
 set completeopt=noinsert,menuone
@@ -189,19 +189,19 @@ vnoremap <leader>r y:%s/<C-R>"
 nnoremap <leader>w :w<CR>
 vnoremap <leader>w :w<CR>
 
-autocmd FileType c nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType c vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType javascript nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType javascript vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType rust nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType rust vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
-autocmd FileType typescript nnoremap <buffer> <leader>] :TsuDefinition<CR> 
-autocmd FileType typescript vnoremap <buffer> <leader>] :TsuDefinition<CR> 
+" autocmd FileType c nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType c vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType javascript nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType javascript vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType rust nnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType rust vnoremap <buffer> <leader>] :YcmCompleter GoTo<CR>
+" autocmd FileType typescript nnoremap <buffer> <leader>] :TsuDefinition<CR> 
+" autocmd FileType typescript vnoremap <buffer> <leader>] :TsuDefinition<CR> 
 autocmd FileType go nnoremap <buffer> <leader>] :GoDef<CR> 
 autocmd FileType go vnoremap <buffer> <leader>] :GoDef<CR> 
 
-nnoremap <leader>} :YcmCompleter GoToReferences<CR>
-vnoremap <leader>} :YcmCompleter GoToReferences<CR>
+" nnoremap <leader>} :YcmCompleter GoToReferences<CR>
+" vnoremap <leader>} :YcmCompleter GoToReferences<CR>
 nnoremap <leader><CR> :TsuImport<CR>
 vnoremap <leader><CR> :TsuImport<CR>
 " Replace pane buffer on buffer deletion
@@ -260,18 +260,18 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-" Jump to airline buffer
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader>k <Plug>AirlineSelectPrevTab
-nmap <leader>j <Plug>AirlineSelectNextTab
+" " Jump to airline buffer
+" nmap <leader>1 <Plug>AirlineSelectTab1
+" nmap <leader>2 <Plug>AirlineSelectTab2
+" nmap <leader>3 <Plug>AirlineSelectTab3
+" nmap <leader>4 <Plug>AirlineSelectTab4
+" nmap <leader>5 <Plug>AirlineSelectTab5
+" nmap <leader>6 <Plug>AirlineSelectTab6
+" nmap <leader>7 <Plug>AirlineSelectTab7
+" nmap <leader>8 <Plug>AirlineSelectTab8
+" nmap <leader>9 <Plug>AirlineSelectTab9
+" nmap <leader>k <Plug>AirlineSelectPrevTab
+" nmap <leader>j <Plug>AirlineSelectNextTab
 
 " https://stackoverflow.com/questions/1534835/how-do-i-close-all-buffers-that-arent-shown-in-a-window-in-vim
 function! DeleteInactiveBufs()
