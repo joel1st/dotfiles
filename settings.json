@@ -1,0 +1,20 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": false,
+    "<C-k>": false,
+    "<C-p>": false
+  },
+  "editor.accessibilitySupport": "off",
+  "extensions.autoUpdate": false,
+  "window.commandCenter": true,
+  "window.zoomLevel": 1,
+  "vim.useSystemClipboard": true
+}
